@@ -1,0 +1,38 @@
+
+PROCEDURE dot_Product(v1,v2: ARRAY_OF FLOAT[n], VAR vec )
+VAR
+    i:INTEGER
+BEGIN
+    FOR i FROM 0 TO n-1  DO
+        vec:= vec + (v1[i]*v2[i])
+    END_FOR
+END
+
+ALGORITHM dot
+VAR
+    n,i,j:INTEGER
+    T1,T2: ARRAY_OF FLOAT(n)
+    Ps : FLOAT
+
+BEGIN
+ i:=0
+ j:=0
+ Ps:=0;
+    write("type the length of T1 and T2")
+    read(n)
+    FOR i FROM 0 TO n-1 STEP   DO
+        read(T1[i])
+    END_FOR
+    FOR j FROM 0 TO n-1 STEP  DO
+        read(T2[j])
+    END_FOR
+    dot_Product(T1,T2,Ps)
+    write(Ps)
+    IF(PS =0) THEN
+    write("T1 et T2 sont orthogonaux")
+    ELSE 
+        write("T1 et T2 ne sont pas orthogonaux")
+    END_IF
+
+
+END
